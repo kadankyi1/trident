@@ -1,0 +1,83 @@
+<div class="page">
+  <span style="display: none;" id="page_name_holder">categories_in_page</span>
+  <a style="display: none;" id="link_holder"></a>
+  <div class="navbar" style="background: rgba(88,48,130,1);
+background: -moz-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(88,48,130,1)), color-stop(100%, rgba(34,193,218,1)));
+background: -webkit-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: linear-gradient(135deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#583082', endColorstr='#22c1da', GradientType=1 );">
+      <div class="navbar-inner sliding">
+       <div class="left sliding">
+        <a onclick="setProfileInfo('','','','');"  href="#" class="link back">
+           <i class="icon icon-back"></i>
+          <span class="ios-only" style="color: #1d3355;">Back</span>
+        </a>
+      </div>
+     <div class="title">Categories</div>
+      <div class="right">
+        <a class="link icon-only searchbar-enable" data-searchbar=".searchbar-demo">
+          <i class="icon f7-icons ios-only" style="color: #1d3355;">search_strong</i>
+          <i class="icon material-icons md-only">search</i>
+        </a>
+      </div>
+      <form data-search-container=".search-list" data-search-in=".item-title" class="searchbar searchbar-expandable searchbar-demo searchbar-init">
+        <div class="searchbar-inner">
+          <div class="searchbar-input-wrap">
+            <input id="search_input_categories" type="search" placeholder="Search For A Book"/>
+            <i class="searchbar-icon"></i>
+            <span class="input-clear-button"></span>
+          </div>
+          <span class="searchbar-disable-button">Cancel</span>
+            <a href="#" style="margin: 15px;" onclick="getBooksFromSearch('categories_in_page');">
+              <i style="color: red" class="icon f7-icons ios-only">arrow_right</i>
+              <i style="color: red" class="icon material-icons md-only">arrow_forward</i>
+            </a>
+        </div>
+      </form>
+    </div>
+  </div>
+        <div class="page-content">
+<div class="list links-list">
+  <ul>
+    <li onclick="getCategoryBooks('Christian Literature');"><a href="/book_list/">Christian Literature</a></li>
+    <li onclick="getCategoryBooks('Art & Photography');"><a href="/book_list/">Art & Photography</a></li>
+    <li onclick="getCategoryBooks('Biographies & Memiors');"><a href="/book_list/">Biographies & Memiors</a></li>
+    <li onclick="getCategoryBooks('Business & Money');"><a href="/book_list/">Business & Money</a></li>
+    <li onclick="getCategoryBooks('Children's eBook');"><a href="/book_list/">Children's eBook</a></li>
+    <li onclick="getCategoryBooks('Comic & Graphic Novel');"><a href="/book_list/">Comic & Graphic Novel</a></li>
+    <li onclick="getCategoryBooks('Computer & Technology');"><a href="/book_list/">Computer & Technology</a></li>
+    <li onclick="getCategoryBooks('Cookbooks, Food & Wine');"><a href="/book_list/">Cookbooks, Food & Wine</a></li>
+    <li onclick="getCategoryBooks('Craft, Hobbies & Home');"><a href="/book_list/">Craft, Hobbies & Home</a></li>
+    <li onclick="getCategoryBooks('Education & Teaching');"><a href="/book_list/">Education & Teaching</a></li>
+    <li onclick="getCategoryBooks('Engineering & Transportation');"><a href="/book_list/">Engineering & Transportation</a></li>
+    <li onclick="getCategoryBooks('Foreign Languages');"><a href="/book_list/">Foreign Languages</a></li>
+    <li onclick="getCategoryBooks('Health, Fitness & Dieting');"><a href="/book_list/">Health, Fitness & Dieting</a></li>
+    <li onclick="getCategoryBooks('History');"><a href="/book_list/">History</a></li>
+    <li onclick="getCategoryBooks('Humour & Entertainment');"><a href="/book_list/">Humour & Entertainment</a></li>
+    <li onclick="getCategoryBooks('Law');"><a href="/book_list/">Law</a></li>
+    <li onclick="getCategoryBooks('Literature & Fiction');"><a href="/book_list/">Literature & Fiction</a></li>
+    <li onclick="getCategoryBooks('Medical eBooks');"><a href="/book_list/">Medical eBooks</a></li>
+    <li onclick="getCategoryBooks('Mystery, Thriller & Suspense');"><a href="/book_list/">Mystery, Thriller & Suspense</a></li>
+    <li onclick="getCategoryBooks('Non-Fiction');"><a href="/book_list/">Non-Fiction</a></li>
+    <li onclick="getCategoryBooks('Parenting & Relationships');"><a href="/book_list/">Parenting & Relationships</a></li>
+    <li onclick="getCategoryBooks('Politics & Social Sciences');"><a href="/book_list/">Politics & Social Sciences</a></li>
+    <li onclick="getCategoryBooks('Reference');"><a href="/book_list/">Reference</a></li>     
+    <li onclick="getCategoryBooks('Religion & Spirituality');"><a href="/book_list/">Religion & Spirituality</a></li> <!--new categories-->
+     <li onclick="getCategoryBooks('Romance');"><a href="/book_list/">Romance</a></li> <!--new categories-->
+    <li onclick="getCategoryBooks('Science & Math');"><a href="/book_list/">Science & Math</a></li>
+    <li onclick="getCategoryBooks('Science Fiction & Fantasy');"><a href="/book_list/">Science Fiction & Fantasy</a></li>
+    <li onclick="getCategoryBooks('Self-Help');"><a href="/book_list/">Self-Help</a></li>          
+    <li onclick="getCategoryBooks('Sport & Outdoors');"><a href="/book_list/">Sport & Outdoors</a></li>
+    <li onclick="getCategoryBooks('Teen & Young Adult');"><a href="/book_list/">Teen & Young Adult</a></li>
+    <li onclick="getCategoryBooks('Travel');"><a href="/book_list/">Travel</a></li>
+    <li onclick="getCategoryBooks('Travel');"><a href="/book_list/">Others</a></li> <!--new categories-->
+
+
+  </ul>
+</div>
+      </div>
+</div>
+

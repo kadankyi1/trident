@@ -1,0 +1,135 @@
+<div class="page">
+  <div class="navbar" style="background: rgba(88,48,130,1);
+background: -moz-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(88,48,130,1)), color-stop(100%, rgba(34,193,218,1)));
+background: -webkit-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: linear-gradient(135deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#583082', endColorstr='#22c1da', GradientType=1 );">
+      <div class="navbar-inner sliding">
+       <div class="left sliding">
+        <a href="#" class="link back">
+          <i class="icon icon-back"></i>
+          <span class="ios-only">Back</span>
+        </a>
+      </div>
+     <div class="title">Blog</div>
+    </div>
+  </div>
+          <div class="page-content">
+        <div class="block-title" id="title_blog" style="text-align: center; font-size: 22px; line-height: 24px; overflow: visible; white-space: normal;"></div>
+      <br>
+    <div onclick="subscribe(this);" id="id_holder" data-id = "" style="background-color: black; text-align: center; cursor: pointer;display: none;">
+      <a href="#" class="link" style="margin-left: 40px;">
+      <i class="icon f7-icons ios-only">home</i>
+      <i class="icon material-icons md-only" style="color: #16012f;">star</i>
+      </a> Click to subscribe to writer
+    </div>
+        <div class="block">
+        <p  id="story_blog"></p> <br>- <span id="writer_name_blog"></span>
+        </div>
+
+        </div>
+          <div class="popup demo-popup">
+      <div class="page">
+        <div class="navbar" style="background: rgba(88,48,130,1);
+background: -moz-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(88,48,130,1)), color-stop(100%, rgba(34,193,218,1)));
+background: -webkit-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: linear-gradient(135deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#583082', endColorstr='#22c1da', GradientType=1 );">
+          <div class="navbar-inner">
+            <div class="title">Comments</div>
+            <div class="right">
+              <a href="#" class="link popup-close">
+                <i class="icon f7-icons ios-only">close</i>
+                <i class="icon material-icons md-only" style="display: inline;">close</i>
+              </a>
+            </div>         
+             </div>
+        </div>
+            <div class="toolbar messagebar" @messagebar:attachmentdelete="deleteAttachment">
+      <div class="toolbar-inner">
+        <a class="link icon-only" @click="sheetToggle">
+          <i class="icon f7-icons ios-only">camera_fill</i>
+          <i class="icon material-icons md-only">camera_alt</i>
+        </a>
+        <div class="messagebar-area">
+          <textarea class="resizable" placeholder="Leave Comment"></textarea>
+        </div>
+        <a class="link icon-only demo-send-message-link" @click="sendMessage">
+          <i class="icon f7-icons ios-only">arrow_up_fill</i>
+          <i class="icon material-icons md-only">send</i>
+        </a>
+      </div>
+      <div class="messagebar-sheet">
+        {{#each images}}
+        <label class="checkbox messagebar-sheet-image" style="background-image:url({{this}})" @change="handleAttachment">
+          <input type="checkbox">
+          <i class="icon icon-checkbox"></i>
+        </label>
+        {{/each}}
+      </div>
+    </div>
+           <div class="page-content messages-content">
+      <div class="messages">
+       <!-- <div class="messages-title"><b>Sunday, Feb 9,</b> 12:58</div>-->
+        <div class="message message-received">
+          <div class="message-avatar" style="background-image:url(img/pic1.JPG); opacity: 1;"></div>
+          <div class="message-content">
+            <div class="message-name" style="display: block;">John Doe | @johndoe</div>
+            <div class="message-bubble">
+              <div class="message-text">Hi, I am good!<br><span style="float: right; font-size: 10px;">2 days</span></div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="message message-received">
+          <div class="message-avatar" style="background-image:url(img/pic1.JPG); opacity: 1;"></div>
+          <div class="message-content">
+            <div class="message-name" style="display: block;">John Doe | @johndoe</div>
+            <div class="message-bubble">
+              <div class="message-text">Hi there, I am also fine, thanks! And how are you?</div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="message message-received">
+          <div class="message-avatar" style="background-image:url(img/pic1.JPG); opacity: 1;"></div>
+          <div class="message-content">
+            <div class="message-name" style="display: block;">John Doe | @johndoe</div>
+            <div class="message-bubble">
+              <div class="message-text">Nice!</div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="message message-received">
+          <div class="message-avatar" style="background-image:url(img/pic1.JPG); opacity: 1;"></div>
+          <div class="message-content">
+            <div class="message-name" style="display: block;">John Doe | @johndoe</div>
+            <div class="message-bubble">
+              <div class="message-text">Like it very muchsdfg sdfgh wrtghj wertyhj qwertyj qwertyj qwerty!</div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="message message-received">
+          <div class="message-avatar" style="background-image:url(img/pic1.JPG); opacity: 1;"></div>
+          <div class="message-content">
+            <div class="message-name" style="display: block;">John Doe | @johndoe</div>
+            <div class="message-bubble">
+              <div class="message-text">Awesome!</div>
+            </div>
+          </div>
+        </div>
+        <br>
+      </div>
+    </div>
+      </div>
+    </div>
+</div>
+

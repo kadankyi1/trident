@@ -1,0 +1,192 @@
+<div class="page">
+  <div class="navbar" style="background: rgba(88,48,130,1);
+background: -moz-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(88,48,130,1)), color-stop(100%, rgba(34,193,218,1)));
+background: -webkit-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: linear-gradient(135deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#583082', endColorstr='#22c1da', GradientType=1 );">
+      <div class="navbar-inner sliding">
+       <div class="left sliding">
+        <a onclick="setProfileInfo('','','','');" href="#" class="link back">
+          <i class="icon icon-back"></i>
+          <span class="ios-only" style="color: #1d3355;">Back</span>
+        </a>
+      </div>
+     <div class="title">Scoops</div>
+      <div class="right">
+        <a class="link icon-only searchbar-enable" data-searchbar=".searchbar-demo3">
+          <i class="icon f7-icons ios-only" style="color: #1d3355;">search_strong</i>
+          <i class="icon material-icons md-only">search</i>
+        </a>
+      </div>
+      <form onsubmit = "getBlogsFromSearch('bloglist_in_page');" data-search-container=".search-list" data-search-in=".item-title" class="searchbar searchbar-expandable searchbar-demo3 searchbar-init">
+        <div class="searchbar-inner">
+          <div class="searchbar-input-wrap">
+            <input id="search_input_bloglist" type="search" placeholder="Search For A Blog"/>
+            <i class="searchbar-icon"></i>
+            <span class="input-clear-button"></span>
+          </div>
+           <span class="searchbar-disable-button">Cancel</span>
+        </div>
+      </form>
+    </div>
+  </div>
+      <div class="page-content">
+          <!-- <div class="block-title">Blogs from all over the world</div> -->
+    <div class="list media-list">
+      <ul id="blogs_holder_booklist">
+        
+    </ul>
+    </div>
+      </div>
+          <div class="popup demo-popup">
+      <div class="page">
+        <div class="navbar" style="background: rgba(88,48,130,1);
+background: -moz-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(88,48,130,1)), color-stop(100%, rgba(34,193,218,1)));
+background: -webkit-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: linear-gradient(135deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#583082', endColorstr='#22c1da', GradientType=1 );">
+          <div class="navbar-inner">
+            <div class="title">Comments</div>
+            <div class="right">
+              <a href="#" class="link popup-close">
+                <i class="icon f7-icons ios-only">close</i>
+                <i class="icon material-icons md-only" style="display: inline;">close</i>
+              </a>
+            </div>         
+             </div>
+        </div>
+        <div class="page-content">
+       <div class="list media-list">
+      <ul>
+        <li>
+          <div class="item-content">
+            <div class="item-inner">
+              <div class="item-title-row">
+                <div class="item-title">John Doe</div>
+              </div>
+              <div style="overflow: visible; white-space: normal; font-size: 14px;color: #757575;line-height: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis tellus ut turpis condimentum, ut dignissim lacus tincidunt. Cras dolor metus, ultrices condimentum sodales sit amet, pharetra sodales eros. Phasellus vel felis tellus. Mauris rutrum ligula nec dapibus feugiat. In vel dui laoreet, commodo augue id, pulvinar lacus.</div>
+            </div>
+          </div>
+        </li>
+         <li>
+          <div class="item-content">
+            <div class="item-inner">
+              <div class="item-title-row">
+                <div class="item-title">John Doe</div>
+              </div>
+              <div style="overflow: visible; white-space: normal; font-size: 14px;color: #757575;line-height: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis tellus ut turpis condimentum, ut dignissim lacus tincidunt. Cras dolor metus, ultrices condimentum sodales sit amet, pharetra sodales eros. Phasellus vel felis tellus. Mauris rutrum ligula nec dapibus feugiat. In vel dui laoreet, commodo augue id, pulvinar lacus.</div>
+            </div>
+          </div>
+        </li> 
+        <li>
+          <div class="item-content">
+            <div class="item-inner">
+              <div class="item-title-row">
+                <div class="item-title">John Doe</div>
+              </div>
+              <div style="overflow: visible; white-space: normal; font-size: 14px;color: #757575;line-height: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis tellus ut turpis condimentum, ut dignissim lacus tincidunt. Cras dolor metus, ultrices condimentum sodales sit amet, pharetra sodales eros. Phasellus vel felis tellus. Mauris rutrum ligula nec dapibus feugiat. In vel dui laoreet, commodo augue id, pulvinar lacus.</div>
+            </div>
+          </div>
+        </li>
+         <li>
+          <div class="item-content">
+            <div class="item-inner">
+              <div class="item-title-row">
+                <div class="item-title">John Doe</div>
+              </div>
+              <div style="overflow: visible; white-space: normal; font-size: 14px;color: #757575;line-height: 20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis tellus ut turpis condimentum, ut dignissim lacus tincidunt. Cras dolor metus, ultrices condimentum sodales sit amet, pharetra sodales eros. Phasellus vel felis tellus. Mauris rutrum ligula nec dapibus feugiat. In vel dui laoreet, commodo augue id, pulvinar lacus.</div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+        </div>
+            <div class="list media-list" style=" position: fixed; left: 0; bottom: 0; width: 100%; background-color: #d2d2d2; margin-bottom: 0;">
+    <li class="item-content item-input">
+    <div class="item-inner">
+            <div class="item-input-wrap">
+              <input type="text" placeholder="Comment">
+              <span class="input-clear-button"></span>
+            </div>
+          </div>
+          <div class="item-media">
+          <i class="icon f7-icons ios-only" style="color: #583082;">paper_plane_fill</i>
+          <i class="icon material-icons md-only" style="color: #16012f;">send</i>
+              </div>
+        </li>
+      </div>
+      </div>
+    </div>
+
+
+              <div class="popup story-popup">
+      <div class="page">
+        <div class="navbar" style="background: rgba(88,48,130,1);
+background: -moz-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(88,48,130,1)), color-stop(100%, rgba(34,193,218,1)));
+background: -webkit-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: linear-gradient(135deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#583082', endColorstr='#22c1da', GradientType=1 );">
+          <div class="navbar-inner">
+            <div class="title">Blog</div>
+            <div class="right">
+              <a href="#" class="link popup-close">
+                <i class="icon f7-icons ios-only">close</i>
+                <i class="icon material-icons md-only" style="display: inline;">close</i>
+              </a>
+            </div>         
+             </div>
+        </div>
+        <div class="page-content">
+        <div class="block-title" style="text-align: center; font-size: 22px; line-height: 24px; overflow: visible; white-space: normal;">Test Blog</div>
+          <div class="" style="text-align: center;">
+        <div class="chip color-red" style="font-size: 10px; font-style: bold;">
+          <div class="chip-label">Example</div>
+        </div>
+        <div class="chip color-green" style="font-size: 10px; font-style: bold;">
+          <div class="chip-label">Another</div>
+        </div>
+         <div class="chip color-blue" style="font-size: 10px; font-style: bold;">
+          <div class="chip-label">Science</div>
+        </div>
+      </div> 
+      <br>
+        <div style="text-align: center;">      
+        <a href="#" class="link" style="margin-right: 40px;">
+      <i class="icon f7-icons ios-only">home</i>
+      <i class="icon material-icons md-only" style="color: #16012f;">favorite<span class="badge color-green" style="border-radius: 50%;">5</span>
+      </i>
+      </a>
+      <a href="#" class="link popup-open" data-popup=".demo-popup">
+      <i class="icon f7-icons ios-only">home</i>
+      <i class="icon material-icons md-only" style="color: #16012f;">chat_bubble<span class="badge color-green" style="border-radius: 50%;">5</span></i>
+      </a>
+      <a href="#" class="link" style="margin-left: 40px;">
+      <i class="icon f7-icons ios-only">home</i>
+      <i class="icon material-icons md-only" style="color: #16012f;">star</i>
+      </a></div>
+        <div class="block">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, quo rem beatae, delectus eligendi est saepe molestias perferendis suscipit, commodi labore ipsa non quasi eum magnam neque ducimus! Quasi, numquam.
+Maiores culpa, itaque! Eaque natus ab cum ipsam numquam blanditiis a, quia, molestiae aut laudantium recusandae ipsa. Ad iste ex asperiores ipsa, mollitia perferendis consectetur quam eaque, voluptate laboriosam unde.
+Sed odit quis aperiam temporibus vitae necessitatibus, laboriosam, exercitationem dolores odio sapiente provident. Accusantium id, itaque aliquam libero ipsum eos fugiat distinctio laboriosam exercitationem sequi facere quas quidem magnam reprehenderit.
+Pariatur corporis illo, amet doloremque. Ab veritatis sunt nisi consectetur error modi, nam illo et nostrum quia aliquam ipsam vitae facere voluptates atque similique odit mollitia, rerum placeat nobis est.
+Et impedit soluta minus a autem adipisci cupiditate eius dignissimos nihil officia dolore voluptatibus aperiam reprehenderit esse facilis labore qui, officiis consectetur. Ipsa obcaecati aspernatur odio assumenda veniam, ipsum alias.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ipsa debitis sed nihil eaque dolore cum iste quibusdam, accusamus doloribus, tempora quia quos voluptatibus corporis officia at quas dolorem earum!
+Quod soluta eos inventore magnam suscipit enim at hic in maiores temporibus pariatur tempora minima blanditiis vero autem est perspiciatis totam dolorum, itaque repellat? Nobis necessitatibus aut odit aliquam adipisci.
+Tenetur delectus perspiciatis ex numquam, unde corrupti velit! Quam aperiam, animi fuga veritatis consectetur, voluptatibus atque consequuntur dignissimos itaque, sint impedit cum cumque at. Adipisci sint, iusto blanditiis ullam? Vel?
+Dignissimos velit officia quibusdam! Eveniet beatae, aut, omnis temporibus consequatur expedita eaque aliquid quos accusamus fugiat id iusto autem obcaecati repellat fugit cupiditate suscipit natus quas doloribus? Temporibus necessitatibus, libero.</p>
+        </div>
+
+        </div>
+      </div>
+    </div>
+</div>
+

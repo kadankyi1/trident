@@ -1,0 +1,74 @@
+<div class="page">
+  <div class="navbar" style="background: rgba(88,48,130,1);
+background: -moz-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(88,48,130,1)), color-stop(100%, rgba(34,193,218,1)));
+background: -webkit-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: linear-gradient(135deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#583082', endColorstr='#22c1da', GradientType=1 );">
+      <div class="navbar-inner sliding">
+       <div class="left sliding">
+        <a  onclick="setProfileInfo('','','','');" id="back_upload_blog_in" href="#" class="link back">
+          <i class="icon icon-back"></i>
+          <span class="ios-only" style="color: #1d3355;">Back</span>
+        </a>
+      </div>
+     <div class="title">Write Scoop</div>
+      <div class="right">
+       <!-- <label for="article_over_art">
+        <a href="#" class="link">
+          <i class="icon f7-icons ios-only">cloud_upload</i>
+          <i class="icon material-icons md-only">attach_file</i>
+        </a>
+        </label>-->
+        <a onclick="addArticle();" href="#" class="link">
+          <i class="icon f7-icons ios-only" style="color: #1d3355;">cloud_upload</i>
+          <i class="icon material-icons md-only">file_upload</i>
+        </a>
+      </div>
+    </div>
+  </div>
+      <div class="page-content">
+          <div class="list no-hairlines-md">
+      <ul>
+          <input style="display:none ;" onchange="toastText('Article Cover Art Selected');" type="file"  accept="image/x-png,image/gif,image/jpeg" id="article_over_art">
+          <label style="cursor: pointer;" for="article_over_art">
+            <div class="block">
+               <div style="border: 2px solid #16012f; line-height: 32px; text-align: center; border-radius: 4px; font-family: “Raleway-Regular”;">
+                ADD COVER ART  
+</div> 
+</div>
+</label>
+        <li class="item-content item-input">
+            <div class="item-inner">
+            <div class="item-title item-floating-label">Title of Scoop</div>
+            <div class="item-input-wrap">
+              <input type="text" id="article_title" placeholder="" style="height: auto;">
+              <span class="input-clear-button"></span>
+            </div>
+          </div>
+        </li>
+         <li class="item-content item-input">
+            <div class="item-inner">
+            <div class="item-title item-floating-label">Tags (eg. sceince, culture)</div>
+            <div class="item-input-wrap">
+              <input type="text"  id="article_tags" placeholder="" style="height: auto;">
+              <span class="input-clear-button"></span>
+            </div>
+          </div>
+        </li>
+        <li class="item-content item-input">
+          <div class="item-inner">
+            <div class="item-input-wrap">
+              <textarea  id="article_body" class="resizable" placeholder="Tap to start typing"></textarea>
+            </div>
+          </div>
+        </li>
+    </ul>
+    </div>
+
+    </div>
+      </div>
+</div>
+

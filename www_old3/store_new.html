@@ -1,0 +1,278 @@
+<div class="page">
+  <span style="display: none;" id="page_name_holder">store_front_in_page</span>
+  <a style="display: none;" id="link_holder"></a>
+
+  <div class="navbar" style="background: rgba(88,48,130,1);
+background: -moz-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(88,48,130,1)), color-stop(100%, rgba(34,193,218,1)));
+background: -webkit-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: linear-gradient(135deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#583082', endColorstr='#22c1da', GradientType=1 );">
+      <div class="navbar-inner sliding">
+       <div class="left sliding">
+        <a onclick="setProfileInfo('','','','');" href="#" class="link back">
+          <i class="icon icon-back"></i>
+          <span class="ios-only" style="color: #1d3355;">Back</span>
+        </a>
+      </div>
+     <div class="title">Store</div>
+      <div class="right">
+        <a class="link icon-only searchbar-enable" data-searchbar=".searchbar-demo">
+          <i class="icon f7-icons ios-only" style="color:  #1d3355;">search_strong</i>
+          <i class="icon material-icons md-only">search</i>
+        </a>
+      </div>
+      <form onsubmit="getBooksFromSearch('store_front_in_page');" data-search-container=".search-list" data-search-in=".item-title" class="searchbar searchbar-expandable searchbar-demo searchbar-init">
+        <div class="searchbar-inner">
+          <div class="searchbar-input-wrap">
+            <input type="search" id="search_input_store_front" placeholder="Search"/>
+            <i class="searchbar-icon"></i>
+            <span class="input-clear-button"></span>
+          </div>
+          <span class="searchbar-disable-button">Cancel</span>
+        </div>
+      </form>
+    </div>
+  </div>
+      <div class="page-content">
+            <div class="block"><p><a href="/categories/" class="button button-raised" style="border-color: #1d3355; color: #1d3355;">Categories</a></p></div>
+ <div class="popover popover-menu">
+    <div class="popover-angle"></div>
+    <div class="popover-inner">
+      <div class="list">
+        <ul>
+                 </ul>
+      </div>
+    </div>
+  </div>
+  <!--first slider-->
+          
+    <div class="card" id="new_card_store_front" style="display: none;">
+           <div class="block-title">New</div>
+     <div data-space-between="10" data-slides-per-view="auto" data-touch-move-stop-propagation= "false" data-observer="true" data-observe-parents="true" class="swiper-container swiper-init demo-swiper-multiple demo-swiper-multiple-auto" style="height: 160px;">
+     <!-- <div class="swiper-pagination"></div>-->
+      <div class="swiper-wrapper" id="new_books_holder_store_front">
+        <!--1-->
+        
+
+      </div>
+    </div>
+
+</div>
+
+<!--second slider-->
+    <div class="card" id="highlyrated_card_store_front" style="display: none;">
+           <div class="block-title">Highly Rated</div>
+     <div data-space-between="10" data-slides-per-view="auto" data-touch-move-stop-propagation= "false" data-observer="true" data-observe-parents="true" class="swiper-container swiper-init demo-swiper-multiple demo-swiper-multiple-auto" style="height: 160px;">
+     <!-- <div class="swiper-pagination"></div>-->
+      <div class="swiper-wrapper" id="highlyrated_books_holder_store_front">
+
+
+      </div>
+    </div>
+
+</div>
+
+<!--third slider-->
+     <div class="card" id="recommended_card_store_front" style="display: none;">
+           <div class="block-title">Recommended</div>
+     <div data-space-between="10" data-slides-per-view="auto" data-touch-move-stop-propagation= "false" data-observer="true" data-observe-parents="true" class="swiper-container swiper-init demo-swiper-multiple demo-swiper-multiple-auto" style="height: 160px;">
+     <!-- <div class="swiper-pagination"></div>-->
+      <div class="swiper-wrapper" id="recommended_books_holder_store_front">
+
+      </div>
+    </div>
+
+</div>
+
+<!--fourth slider-->
+   <div class="card" id="bestselling_card_store_front" style="display: none;">
+           <div class="block-title">Best Seller</div>
+     <div data-space-between="10" data-slides-per-view="auto" data-touch-move-stop-propagation= "false" data-observer="true" data-observe-parents="true" class="swiper-container swiper-init demo-swiper-multiple demo-swiper-multiple-auto" style="height: 160px;">
+     <!-- <div class="swiper-pagination"></div>-->
+      <div class="swiper-wrapper" id="bestselling_books_holder_store_front">
+      
+      </div>
+    </div>
+
+</div>
+      </div>
+              
+
+<!--book popup-->
+  <div class="popup book-popup">
+      <div class="page">
+        <div class="navbar md-only" style="background: rgba(88,48,130,1);
+background: -moz-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(88,48,130,1)), color-stop(100%, rgba(34,193,218,1)));
+background: -webkit-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: linear-gradient(135deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#583082', endColorstr='#22c1da', GradientType=1 );">
+          <div class="navbar-inner">
+            <div class="title"></div>
+            <div class="right">
+              <a id="close_book_popup_android" class="link popup-close">
+                <i class="icon material-icons md-only" style="display: inline;">close</i>
+              </a>
+            </div>         
+             </div>
+        </div>
+        <div class="navbar ios-only">
+          <div class="navbar-inner">
+            <div class="title"></div>
+            <div class="right">
+              <a id="close_book_popup_ios" class="link popup-close">
+                <i class="icon f7-icons ios-only" style="color: #16012f;">close</i>
+              </a>
+            </div>         
+             </div>
+        </div>
+        <div class="page-content">
+ <div class="block">
+      <div class="row">
+        <div class="col"><img id="book_coverart_popup_booklist" src="img/book.jpg" width="100%"></div>
+        <div class="col"><h1><span id="book_title_popup_booklist"> Loading... </span>
+        <br>
+        <span id="book_author_popup_booklist" style="font-size: 16px; color: grey;">Loading...</span>
+        <br>
+        <span id="book_category_popup_booklist" style="font-size: 12px; color: grey; line-height: 1;">Loading...</span></h1>
+        <div class="row">
+        <div class="col">
+          <!--
+        <a href="#" class="link">
+      <i class="icon f7-icons ios-only">home</i>
+      <i class="icon material-icons md-only" style="color: #16012f;">favorite<span class="badge color-green" style="border-radius: 50%;">5</span></i>
+      </a>
+          -->
+      </div>
+      
+       <div style="display: none;" class="col">
+      <a href="#" class="link popup-open" data-popup=".demo-popup">
+      <i class="icon f7-icons ios-only">home</i>
+      <i class="icon material-icons md-only" style="color: #16012f;">chat_bubble<span class="badge color-green" style="border-radius: 50%;" id="book_commentsnum_popup_booklist"></span></i>
+      </a></div>
+       <div style="display: none;" class="col">
+      <a href="#" class="link">
+      <i class="icon f7-icons ios-only">home</i>
+      <i class="icon material-icons md-only" style="color: #16012f;">star</i>
+      </a></div>
+    
+      </div>
+      </div>
+      </div>
+      <p style="font-weight: 600;">Price: <span id="book_price_popup_booklist">Loading...</span></p>      
+      <p style="display: none;">Number of Pages: <span  id="book_pagesnum_popup_booklist">Loading...</span></p>
+      <p style="font-weight: 600;" id="book_ratings">Not Rated</p>
+      <p>Size: <span  id="book_size_popup_booklist">Loading...</span></p> 
+      <p>Description; <span  id="book_description_popup_booklist">Loading...</span></p>
+        <button  id="book_buybtn_popup_booklist" onclick="buyBook(this);" data-book_id = "" class="col button button-fill button-round color-blue"></button>
+
+        <button  id="real_buy_book_btn" onclick="prepareSlydePay(this);" data-charge_cedis = "" class="col button button-fill button-round color-green">BUY BOOK</button>
+
+        <div class="block"> <p style="text-align: center;" id="rate_text">Rate this Book</p></div>
+                             
+        <div class="row block no-gap">
+          <div class="col">
+             <a id="rate_star_1" onclick="rateBook('1', '');" href="#" class="link" style="color: #16012f;">
+                <i id="rate_star_1_ios" class="icon f7-icons ios-only">star</i>
+                <i id="rate_star_1_android" class="icon material-icons md-only" style="color: #16012f;">star_border</i>
+              </a>
+          </div>
+           <div class="col">
+             <a id="rate_star_2" onclick="rateBook('2', '');" href="#" class="link" style="color: #16012f;">
+                <i id="rate_star_2_ios" class="icon f7-icons ios-only">star</i>
+                <i id="rate_star_2_android" class="icon material-icons md-only" style="color: #16012f;">star_border</i>
+              </a>
+          </div> <div class="col">
+             <a id="rate_star_3" onclick="rateBook('3', '');" href="#" class="link" style="color: #16012f;">
+                <i id="rate_star_3_ios" class="icon f7-icons ios-only">star</i>
+                <i id="rate_star_3_android" class="icon material-icons md-only" style="color: #16012f;">star_border</i>
+              </a>
+          </div> <div class="col">
+             <a id="rate_star_4" onclick="rateBook('4', '');" href="#" class="link" style="color: #16012f;">
+                <i id="rate_star_4_ios" class="icon f7-icons ios-only">star</i>
+                <i id="rate_star_4_android" class="icon material-icons md-only" style="color: #16012f;">star_border</i>
+              </a>
+          </div> 
+          <div class="col">
+             <a id="rate_star_5" onclick="rateBook('5', '');" href="#" class="link" style="color: #16012f;">
+                <i id="rate_star_5_ios" class="icon f7-icons ios-only">star</i>
+                <i id="rate_star_5_android" class="icon material-icons md-only" style="color: #16012f;">star_border</i>
+              </a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<!-- SLYDEPAY -->
+
+  <div class="popup pay-popup">
+      <div class="page">
+        <div class="navbar md-only" style="background: rgba(88,48,130,1);
+background: -moz-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(88,48,130,1)), color-stop(100%, rgba(34,193,218,1)));
+background: -webkit-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: linear-gradient(135deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#583082', endColorstr='#22c1da', GradientType=1 );">
+          <div class="navbar-inner">
+            <div class="title"></div>
+            <div class="right">
+              <a id="close_pay_popup_btn_android" class="link popup-close">
+                <i class="icon material-icons md-only" style="display: inline;">close</i>
+              </a>
+            </div>         
+             </div>
+        </div>
+        <div class="navbar ios-only">
+          <div class="navbar-inner">
+            <div class="title"></div>
+            <div class="right">
+              <a id="close_pay_popup_btn_ios" href="#" class="link popup-close">
+                <i class="icon f7-icons ios-only" style="color: #16012f;">close</i>
+              </a>
+            </div>         
+             </div>
+        </div>
+        <div class="page-content">
+ <div class="block">
+      <div class="row">
+        <div class="col">
+        <div class="row">
+        <div class="col">
+        </div>
+    
+      </div>
+      </div>
+      </div>
+        <p style="font-size: small; margin-right: 5%; margin-left: 5%;">Click The "Make Payment On SlydePay" button below to make payment. You will be charged in equivalent Cedis.<br> After you make payment on SlydePay, Please return to the app and  click the "Confirm Payment" button below for Trident to check  and confirm your payment.<br>If SlydePay Shows An Error, Please click the "Reset Slydepay" button below to reset SlydePay and Click The "Make Payment On SlydePay" to try payment again</p><br>
+
+        <a class="link external" id="slydepay_link" href="http://www.tridentglobal.com" style="text-align: center;width: 100%"><button class="col button button-fill color-blue">Make Payment On Slydepay</button></a>
+
+        <br><br>
+
+        <button style="width: 100%" onclick="checkSlydepayPaymentStatus('2');" class="col button button-fill color-green">
+        Confirm Payment</button><br>
+
+        <br><br>
+
+        <button style="width: 100%" id="reset_slydepay" onclick="prepareSlydePay(this);" data-charge_cedis = ""  class="col button button-fill color-gray">
+           Reset Slydepay
+        </button>
+
+       </div>
+      </div>
+    </div>
+</div>
+<a style="display: none;" id="open_pay_popup_link" class="popup-open" data-popup=".pay-popup"></a>
+<a style="display: none;" id="open_book_popup_link" class="popup-open" data-popup=".book-popup"></a>
+</div>
+

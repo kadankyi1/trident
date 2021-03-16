@@ -1,0 +1,124 @@
+<div class="page" style="background: rgba(88,48,130,1);
+background: -moz-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(88,48,130,1)), color-stop(100%, rgba(34,193,218,1)));
+background: -webkit-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: linear-gradient(135deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#583082', endColorstr='#22c1da', GradientType=1 );">
+  <div class="navbar no-shadow" style="background: none;">
+    <div class="navbar-inner sliding">
+      <div class="right">
+        <a href="/settings/" class="">
+          <i class="icon f7-icons ios-only" style="color: #16012f;">gear_fill</i>
+        <i class="icon material-icons md-only">settings</i>
+       
+        </a>
+      </div>
+     <!-- <div class="title">Trident</div>-->
+    <a style="display: none;" id="link_holder2"></a>
+    </div>
+  </div>
+
+   <div class="page-content">
+  <span style="display: none;" id="page_name_holder">main_logged_in_page</span>
+  <br>
+ <div style="height: 60%; width: 100%;">
+     <div style="border: 1px solid ; border-color: #d9d9d9; width: 200px; height: 200px; margin: 0 auto; overflow: hidden; border-radius: 50%;">
+            <label style="cursor: pointer;" for="imgInp">
+            <img id="profile_pic_main" src="img/new_default_profile.png" style="width: 100%;">
+            </label>
+          </div>
+          <input style="display: none;" onchange="addProfilePic();" type="file" name="profile_pic_input_main"  accept="image/x-png,image/gif,image/jpeg" id="imgInp">
+          <p id="profile_name_main" style="text-align: center; color: white; font-weight: 600; font-style: bold;"></p>
+        <div class="block">
+      <div class="row no-gap" style="text-align: center; color: white; font-weight: 600; font-style: bold;">
+        <div class="col"><a onclick="getSubs('subscribers', 'mine');" href="/subscribed/" style="color: white;"><span id="my_subscribers_main">...</span><br>SUBSCRIBERS</a></div>
+        <div class="col"><a  onclick="getSubs('subscriptions', 'mine');" href="/subscribed/" style="color: white;"><span id="my_subscriptions_main">...</span><br>SUBSCRIBED</a></div>
+      </div>
+ </div>
+ </div>
+  <div style="height: 40%; width: 100%; background-color: #fff;">
+  <p style="text-align: center; background-color: #afafaf; font-weight: 600; font: bolder;">TOOLS</p>
+     <div class="row" style="margin-bottom: 0px;">
+      <!-- onclick="getBooksForStoreFront();" -->
+      <div   class="col block" style="margin-bottom: 0px;">
+        <p style="text-align: center; color: #16012f;"><a href="/storenew/" onclick="getBooksForStoreFront();">
+        <i class="icon f7-icons ios-only" style="color: #16012f; font-size: 40px;">bag</i>
+        <i class="icon material-icons md-only" style="font-size: 40px; color: #16012f;">store</i>
+        <br><span style="color: #16012f; font-weight: 600; font-style: bold; font-size: 12px;">STORE</span>
+        </a>
+        </p>
+      </div>
+<div class="col block" style="margin-bottom: 0px;">
+        <p  style="text-align: center;">
+        <a href="/lib/" onclick="getBooksMyLibrary('2');">
+        <i class="icon f7-icons ios-only" style="font-size: 40px; color: #16012f;">person</i>
+        <i class="icon material-icons md-only" style="font-size: 40px; color: #16012f;">person_pin</i>
+        <br><span style="color: #16012f; font-weight: 600; font-style: bold; font-size: 12px;">MY HUB</span>
+        </a>
+        </p>
+        </div>
+<div class="col block" style="margin-bottom: 0px;"> 
+        <p  style="text-align: center;"><a href="" onclick="startReadingBook('global');">
+        <i class="icon f7-icons ios-only" style="font-size: 40px; color: #16012f;">bookmark_fill</i>
+        <i class="icon material-icons md-only" style="font-size: 40px;color: #16012f;">local_library</i>
+        <br><span style="color: #16012f; font-weight: 600; font-style: bold; font-size: 12px;">READING</span>
+        </a>
+        </p>
+        </div>       
+        </div>
+        <div class="row" style="margin-bottom: -10px;">
+       <div class="col block">
+        <p  style="text-align: center;"><a href="/blog_list/" onclick="getBlogsFromSearch('?????');">
+        <i class="icon f7-icons ios-only" style="font-size: 40px; color: #16012f;">chat</i>
+        <i class="icon material-icons md-only" style="font-size: 40px; color: #16012f;">forum</i>
+        <br><span style="color: #16012f; font-weight: 600; font-style: bold; font-size: 12px;">SCOOPS</span>
+        </a>
+        </p>
+        </div>
+<div class="col block" style="margin-bottom: 0px;">
+        <p   style="text-align: center;"><a href="/blog_list/" onclick="getBlogsFromSearch('?????-?????');">
+        <i class="icon f7-icons ios-only" style="font-size: 40px; color: #16012f;">star</i>
+        <i class="icon material-icons md-only" style="font-size: 40px; color: #16012f;">star_border</i>
+        <br><span style="color: #16012f; font-weight: 600; font-style: bold; font-size: 12px;">SUBSCRIBED</span>
+        </a>
+        </p>
+        </div>
+<div class="col block">
+        <p style="text-align: center;"><a href="/hub/">
+        <i class="icon f7-icons ios-only" style="font-size: 40px; color: #16012f;">email</i>
+        <i class="icon material-icons md-only" style="font-size: 40px; color: #16012f;">contact_mail</i>
+        <br><span style="color: #16012f; font-weight: 600; font-style: bold; font-size: 12px;">CONTACT</span>
+        </a>
+        </p>
+        </div>     
+        </div>
+  </div>
+     <div class="fab fab-right-center" style="top: 68%;">
+    <a href="#">
+      <i class="icon f7-icons ios-only">add</i>
+      <i class="icon f7-icons ios-only">close</i>
+      <i class="icon material-icons md-only">add</i>
+      <i class="icon material-icons md-only">close</i>
+    </a>
+     <div class="fab-buttons fab-buttons-top">
+      <a href="/upload_book/" class="fab-label-button">
+        <span> <i class="icon f7-icons ios-only">share</i>
+     <i class="icon material-icons md-only">file_upload</i>
+    </span>
+        <span onclick="resetPage('upload_book');" class="fab-label">Upload Book</span>
+      </a>
+      <a href="/upload_blog/" class="fab-label-button">
+        <span> 
+          <i class="icon f7-icons ios-only">compose</i>
+      <i class="icon material-icons md-only">create</i>
+   </span>
+        <span onclick="resetPage('upload_blog');" class="fab-label">Write Scoop</span>
+      </a>
+    </div>
+</div>
+  </div>
+  <!--Nothing Goes Below This-->
+</div>
+</div>

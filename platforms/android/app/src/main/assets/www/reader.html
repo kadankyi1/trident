@@ -1,0 +1,210 @@
+<div class="page" id="reader_body" data-zoomstatus="100" >
+  <div class="navbar" style="background: rgba(88,48,130,1);
+background: -moz-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(88,48,130,1)), color-stop(100%, rgba(34,193,218,1)));
+background: -webkit-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: linear-gradient(135deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#583082', endColorstr='#22c1da', GradientType=1 );">
+      <div class="navbar-inner sliding">
+       <div class="left sliding">
+        <a onclick="setProfileInfo('','','','');"  class="link back">
+          <i class="icon icon-back"></i>
+          <span class="ios-only" style="color: #1d3355;">Back</span>
+        </a>
+      </div>
+     <div class="title">READER</div>
+    </div>
+  </div>
+          <div class="page-content">
+
+     <div class="block">
+      <!--
+      <p class="segmented segmented-raised">
+        <button class="button"  id="pdf-prev"  style="color: #16012f; border-color: #16012f;">PREV</button>
+        <button class="button" id="pdf-next" style="color: #16012f; border-color: #16012f;">NEXT</button>
+      </p>
+    -->
+    </div>
+        <div class="block">
+            <button class="button button-fill color-gray" onclick="startPDFProcess();" id="upload-button">START TRIDENT READER</button> <br> <br>
+            <input type="file" style="display: none;" id="file-to-upload" accept="application/pdf" />
+
+            <div id="pdf-main-container"  style="width: 100%;">
+              <div id="pdf-loader" style="display: none;">Loading document ...</div>
+              <div id="pdf-contents" style="display: none;">
+                <div id="pdf-meta">
+                  <div  class="segmented segmented-raised" id="pdf-buttons">
+
+          <button class="button" onclick="zoom(25);" style="color: #16012f; border-color: #16012f;">ZOOM IN</button>
+          <button class="button" onclick="zoom(-25);" style="color: #16012f; border-color: #16012f;">ZOOM OUT</button>
+
+                  </div>
+
+                  <br>
+
+                  <div  class="segmented segmented-raised" id="pdf-buttons">
+
+          <button class="button" onclick="prevPage();" id="pdf-prev"  style="color: #16012f; border-color: #16012f;">PREV</button>
+          <button class="button" onclick="nextPage();" id="pdf-next" style="color: #16012f; border-color: #16012f;">NEXT</button>
+
+                  </div>
+                  <div id="page-count-container">Page <div id="pdf-current-page"></div> of <div id="pdf-total-pages"></div></div>
+                </div>
+                <canvas id="pdf-canvas" width="700"></canvas>
+                <div id="page-loader" style="display: none;">Loading page ...</div>
+              </div>
+            </div>
+        </div>
+
+        </div>
+<!--comment-->
+
+           <div class="popup comments">
+      <div class="page">
+        <div class="navbar no-shadow" style="background: rgba(88,48,130,1);
+background: -moz-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(88,48,130,1)), color-stop(100%, rgba(34,193,218,1)));
+background: -webkit-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: linear-gradient(135deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#583082', endColorstr='#22c1da', GradientType=1 );">
+          <div class="navbar-inner">
+            <div class="title">Comments</div>
+            <div class="right"><a href="#" class="link popup-close"><i class="icon f7-icons ios-only">close</i>
+          <i class="icon material-icons md-only" style="display: inline;">close</i></a></div>
+          </div>
+        </div>
+           <div class="toolbar messagebar" @messagebar:attachmentdelete="deleteAttachment">
+      <div class="toolbar-inner">
+        <div class="messagebar-area">
+          <textarea id="comment_input_blog" class="resizable" placeholder="Leave Comment"></textarea>
+        </div>
+        <div onclick="postComment();" id="post_comment_btn_main" data-newsid="">
+        <a class="link icon-only demo-send-message-link">
+          <i class="icon f7-icons ios-only">arrow_up_fill</i>
+          <i class="icon material-icons md-only">send</i>
+        </a>
+      </div>
+
+      </div>
+      <div class="messagebar-sheet">
+        {{#each images}}
+        <label class="checkbox messagebar-sheet-image" style="background-image:url({{this}})" @change="handleAttachment">
+          <input type="checkbox">
+          <i class="icon icon-checkbox"></i>
+        </label>
+        {{/each}}
+      </div>
+    </div>
+           <div class="page-content messages-content">
+      <div class="messages" id="comments_holder">
+
+      </div>
+
+    </div>
+    </div>
+    </div>
+
+</div>
+
+<!--
+
+<div class="page">
+  <div class="navbar" style="background: rgba(88,48,130,1);
+background: -moz-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(88,48,130,1)), color-stop(100%, rgba(34,193,218,1)));
+background: -webkit-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: linear-gradient(135deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#583082', endColorstr='#22c1da', GradientType=1 );">
+      <div class="navbar-inner sliding">
+       <div class="left sliding">
+        <a onclick="setProfileInfo('','','','');" href="#" class="link back">
+          <i class="icon icon-back"></i>
+          <span class="ios-only" style="color: #1d3355;">Back</span>
+        </a>
+      </div>
+     <div class="title">Scoop</div>
+     <div onclick="copyUrl('scoop');" class="right">
+        <a href="#" class="link">
+          <i class="icon material-icons md-only">share</i>
+          <i class="icon f7-icons ios-only" style="color: #1d3355;">share</i>
+        </a>
+      </div>
+    </div>
+  </div>
+          <div class="page-content">
+        <div class="block-title" id="title_blog" style="text-align: center; font-size: 22px; line-height: 24px; overflow: visible; white-space: normal;"></div>
+      <br>
+    <div id="cover_art_blog_in_page" style="background-image: url(); background-size: cover; position: relative; width: 100%; padding-top: 100%;">
+     </div>
+     <div class="block">
+      <p class="segmented segmented-raised">
+        <button class="button"  onclick="subscribe(this);" id="id_holder" data-id = "" style="color: #16012f; border-color: #16012f;">Subscribe</button>
+        <button onclick="getComments();" class="button popup-open" data-popup=".comments" style="color: #16012f; border-color: #16012f;">Comment</button>
+      </p>
+      <p style="text-align: center;"><span id="comments_num_holder"></span></p></div>
+      <p style="text-align: center;"><span style="font-weight: bolder; font-style: italic;" id="tags_holder"></span></p></div>
+        <div class="block">
+        <p  id="story_blog"></p>
+         <br>-
+         <a href="/profile/" onclick="getProfileInfo(this)" data-systemid=""  id="writer_name_blog" style="color: #16012f;"></a>
+        </div>
+
+        </div>
+
+  <div class="popup comments">
+      <div class="page">
+        <div class="navbar no-shadow" style="background: rgba(88,48,130,1);
+background: -moz-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(88,48,130,1)), color-stop(100%, rgba(34,193,218,1)));background: -webkit-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: linear-gradient(135deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#583082', endColorstr='#22c1da', GradientType=1 );">
+          <div class="navbar-inner">
+            <div class="title">Comments</div>
+            <div class="right"><a href="#" class="link popup-close"><i class="icon f7-icons ios-only">close</i>
+          <i class="icon material-icons md-only" style="display: inline;">close</i></a></div>
+          </div>
+        </div>
+           <div class="toolbar messagebar" @messagebar:attachmentdelete="deleteAttachment">
+      <div class="toolbar-inner">
+        <div class="messagebar-area">
+          <textarea id="comment_input_blog" class="resizable" placeholder="Leave Comment"></textarea>
+        </div>
+        <div onclick="postComment();" id="post_comment_btn_main" data-newsid="">
+        <a class="link icon-only demo-send-message-link">
+          <i class="icon f7-icons ios-only">arrow_up_fill</i>
+          <i class="icon material-icons md-only">send</i>
+        </a>
+      </div>
+
+      </div>
+      <div class="messagebar-sheet">
+        {{#each images}}
+        <label class="checkbox messagebar-sheet-image" style="background-image:url({{this}})" @change="handleAttachment">
+          <input type="checkbox">
+          <i class="icon icon-checkbox"></i>
+        </label>
+        {{/each}}
+      </div>
+    </div>
+           <div class="page-content messages-content">
+      <div class="messages" id="comments_holder">
+
+
+      </div>
+    </div>
+    </div>
+    </div>
+
+</div>
+
+
+
+-->

@@ -1,0 +1,179 @@
+<div class="page">
+  <div class="navbar" style="background: rgba(88,48,130,1);
+background: -moz-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(88,48,130,1)), color-stop(100%, rgba(34,193,218,1)));
+background: -webkit-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+background: linear-gradient(135deg, rgba(88,48,130,1) 0%, rgba(34,193,218,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#583082', endColorstr='#22c1da', GradientType=1 );">
+      <div class="navbar-inner sliding">
+       <div class="left sliding">
+        <a onclick="setProfileInfo('','','','');" id="back_upload_book" href="#" class="link back">
+          <i class="icon icon-back"></i>
+          <span class="ios-only" style="color: #1d3355;">Back</span>
+        </a>
+      </div>
+     <div class="title">Upload Book</div>
+      <div class="right">
+        <a onclick=" addBook()" href="#" class="link">
+   <i class="icon f7-icons ios-only" style="color: #1d3355;">cloud_upload</i>
+        <i class="icon material-icons md-only">file_upload</i>
+             </a>
+      </div>
+    </div>
+  </div>
+            <input style="display: ;" onchange="setImageSelected(this);" type="file"  accept="image/x-png,image/jpeg" id="book_cover_art">
+          <input style="display: ;" onchange="setPDFSelected(this);" type="file"  accept="application/pdf" id="book_pdf">
+
+      <div class="page-content">
+          <div class="list no-hairlines-md" style="margin: 0;">
+      <ul>
+        <li class="item-content item-input">
+            <div class="item-inner">
+            <div class="item-title item-floating-label">Title of Book</div>
+            <div class="item-input-wrap">
+              <input id="book_title" type="text" placeholder="Title of Book">
+              <span class="input-clear-button"></span>
+            </div>
+          </div>
+        </li>
+        <li class="item-content item-input">
+           <div class="item-inner">
+            <div class="item-title item-floating-label">Author of Book</div>
+            <div class="item-input-wrap">
+              <input id="book_author" type="text" placeholder="Author of Book">
+              <span class="input-clear-button"></span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a class="item-link smart-select smart-select-init" data-open-in="sheet">
+            <select id="book_category" name="mac-windows">
+              <option value="Art & Photography" selected>Art & Photography</option>
+              <option value="Biographies & Memiors">Biographies & Memiors</option>
+              <option value="Business & Money">Business & Money</option>
+              <option value="Children's eBook">Children's eBook</option>  
+              <option value="Christian Literature" >Christian Literature</option>
+              <option value="Comic & Graphic Novel">Comic & Graphic Novel</option>
+              <option value="Computer & Technology">Computer & Technology</option>
+              <option value="Cookbooks, Food & Wine">Cookbooks, Food & Wine</option>
+              <option value="Craft, Hobbies & Home">Craft, Hobbies & Home</option>
+              <option value="Education & Teaching">Education & Teaching</option>
+              <option value="Engineering & Transportation">Engineering & Transportation</option>
+              <option value="Foreign Languages">Foreign Languages</option>
+              <option value="Health, Fitness & Dieting">Health, Fitness & Dieting</option>
+              <option value="Humour & Entertainment">Humour & Entertainment</option>
+              <option value="Law">Law</option>
+              <option value="Literature & Fiction">Literature & Fiction</option>
+              <option value="Medical eBooks">Medical eBooks</option>
+              <option value="Mystery, Thriller & Suspense">Mystery, Thriller & Suspense</option>
+              <option value="Non Fiction">Non Fiction</option>
+              <option value="Parenting & Relationships">Parenting & Relationships</option>
+              <option value="Politics & Social Sciences">Politics & Social Sciences</option>              
+              <option value="Reference">Reference</option>
+   <!--new--> <option value="Religion & Spirituality">Religion & Spirituality</option><!--new-->
+   <!--new--> <option value="Romance">Romance</option><!--new-->
+              <option value="Science & Math">Science & Math</option>
+              <option value="Science Fiction & Fantasy">Science Fiction & Fantasy</option>
+              <option value="Self-Help">Self-Help</option>
+              <option value="Sport & Outdoors">Sport & Outdoors</option>
+              <option value="Teen & Young Adult">Teen & Young Adult</option>
+              <option value="Travel">Travel</option>
+  <!--new-->  <option value="Others">Others</option><!--new-->
+            </select>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title">Categories</div>
+              </div>
+            </div>
+          </a>
+        </li> 
+          <li>
+          <a class="item-link smart-select smart-select-init" data-open-in="sheet">
+            <select onchange="setPriceOrNot(this);"  id="book_free_or_not" name="mac-windows">
+              <option value="Free" selected>Free</option>
+              <option value="Paid">Paid</option>
+            </select>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title">Free or Paid</div>
+              </div>
+            </div>
+          </a>
+        </li> 
+         <li id="currency_column" style="display: none;">
+          <a class="item-link smart-select smart-select-init" data-open-in="sheet">
+            <select id="book_currency" name="mac-windows">
+              <option value="USD" selected>Dollars ($)</option>
+              <option value="GHS">Cedis (¢)</option>
+            </select>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title">Dollars ($) or Cedis (¢)</div>
+              </div>
+            </div>
+          </a>
+        </li>
+         <li class="item-content item-input" id="price_column" style="display: none;">
+           <div class="item-inner">
+            <div class="item-title item-floating-label">Price</div>
+            <div class="item-input-wrap">
+              <input id="book_price" value="0" type="text" placeholder="Price">
+              <span class="input-clear-button"></span>
+            </div>
+          </div>
+        </li>
+        <li class="item-content item-input">
+           <div class="item-inner">
+            <div class="item-title item-floating-label">About Book</div>
+            <div class="item-input-wrap">
+              <textarea id="book_description" class="resizable" placeholder="About Book"></textarea>
+              <span class="input-clear-button"></span>
+            </div>
+          </div>
+        </li>
+        <li>
+      <label class="item-checkbox item-content">
+        <input id="rightstosell" type="checkbox" name="demo-checkbox" value="rights"/>
+        <i class="icon icon-checkbox"></i>
+        <div class="item-inner">
+          <div class="">I agree that I own or have the exclusive rights to sell or upload this book</div>
+        </div>
+      </label>
+    </li>
+    </ul>
+    </div>
+
+       <div class="block">
+      <div class="row">
+        <div class="col">
+        <label for="book_pdf">
+        <div style="width: 100%; height: 200px; border: dotted; border-radius: 10px; border-color: #d2d2d2;">
+       <p style="text-align: center; color: #d2d2d2; margin-top: 60px;"> 
+       <i class="icon f7-icons ios-only">add_round</i>
+        <i class="icon material-icons md-only" style="font-size: 40px;">add_circle</i><br>
+      <span id="pdf_selected">Choose Book (pdf)</span></p>
+        </div>
+        </label>
+        </div>
+
+        <div class="col">
+        <label for="book_cover_art">
+        <div style="width: 100%; height: 200px; border: dotted; border-radius: 10px; border-color: #d2d2d2;">
+
+       <p style="text-align: center; color: #d2d2d2; margin-top: 60px;"> 
+       <i class="icon f7-icons ios-only">add_round</i>
+        <i class="icon material-icons md-only" style="font-size: 40px;">add_circle</i><br>
+      <span id="cover_art_selected">Choose Book Cover</span></p>
+
+        </div>
+      </label>      
+        </div>
+      </div>
+      </div>
+
+    </div>
+      </div>
+</div>
+
