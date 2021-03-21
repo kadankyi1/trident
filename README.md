@@ -19,12 +19,12 @@ https://play.google.com/store/apps/details?id=com.fishpott.trident&hl=en_AU
    <table align="center" border="0" >
   <tr>
     <td>
-      <img width="360" src="1.jpg"/>
+      <img width="360" src="1.png"/>
     <td>
-      <img width="360" src="2.jpg"/>
+      <img width="360" src="2.png"/>
     </td>
     <td> 
-     <img width="360" src="3.jpg"/>
+     <img width="360" src="3.png"/>
     </td>
   </table>
   </div>
@@ -33,10 +33,10 @@ https://play.google.com/store/apps/details?id=com.fishpott.trident&hl=en_AU
   <table align="center" border="0" >
   <tr>
     <td> 
-     <img width="360" src="4.jpg"/>
+     <img width="360" src="4.png"/>
     </td>
     <td> 
-     <img width="360" src="5.jpg"/>
+     <img width="360" src="5.png"/>
     </td>
   </tr>
 </table>
