@@ -9,7 +9,7 @@
 * Read Books
 
 
-### USAGE
+### USAGE (DISCONTINUED)
 ```
 https://play.google.com/store/apps/details?id=com.fishpott.trident&hl=en_AU
 ```
