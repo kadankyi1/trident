@@ -42,8 +42,9 @@
   </tr>
 </table>
   </div>
-## Authors
+  
+### Authors
 
-* **Dankyi Anno Kwaku** - *FishPot Company Limited*
+* **Dankyi Anno Kwaku**
 
 
