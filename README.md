@@ -11,10 +11,9 @@
 * Read Books
 
 
-### USAGE (DISCONTINUED)
-```
-https://play.google.com/store/apps/details?id=com.fishpott.trident&hl=en_AU
-```
+### DOWNLOAD ON GOOGLE PLAYSTORE (DISCONTINUED)
+- <a href="https://play.google.com/store/apps/details?id=com.fishpott.trident&hl=en_AU" target="_blank">https://play.google.com/store/apps/details?id=com.fishpott.trident&hl=en_AU</a>
+
 ## Screenshots
 </br>
 <div align="center">
